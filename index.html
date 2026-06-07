@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Πολιτική Απορρήτου — Ημερολόγιον Πυθαγόρας</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #F5F5F5;
+    color: #1C1C1C;
+    line-height: 1.7;
+  }
+
+  header {
+    background: #FF6D00;
+    color: white;
+    padding: 24px 20px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .header-inner {
+    max-width: 720px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  .app-name {
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+  }
+
+  .lang-toggle {
+    display: flex;
+    background: rgba(255,255,255,0.2);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .lang-btn {
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    border: none;
+    background: transparent;
+    color: rgba(255,255,255,0.75);
+    cursor: pointer;
+    transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+
+  .lang-btn.active {
+    background: white;
+    color: #FF6D00;
+    border-radius: 20px;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 32px 20px 64px;
+  }
+
+  .last-updated {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 28px;
+  }
+
+  h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #FF6D00;
+    margin-bottom: 6px;
+  }
+
+  h2 {
+    font-size: 17px;
+    font-weight: 700;
+    color: #1C1C1C;
+    margin: 28px 0 10px;
+    padding-left: 12px;
+    border-left: 3px solid #FF6D00;
+  }
+
+  p {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 12px;
+  }
+
+  ul {
+    margin: 8px 0 14px 20px;
+  }
+
+  ul li {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 6px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-bottom: 12px;
+    border: 1px solid #E8E8E8;
+  }
+
+  .highlight {
+    background: #FFF3E0;
+    border-left: 3px solid #FF6D00;
+    border-radius: 0 8px 8px 0;
+    padding: 12px 16px;
+    margin: 16px 0;
+    font-size: 14px;
+    color: #444;
+  }
+
+  .contact-box {
+    background: #FF6D00;
+    color: white;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 32px;
+  }
+
+  .contact-box h2 {
+    color: white;
+    border-left-color: white;
+    margin-top: 0;
+  }
+
+  .contact-box p, .contact-box a {
+    color: rgba(255,255,255,0.9);
+  }
+
+  .contact-box a {
+    font-weight: 600;
+  }
+
+  .lang-section { display: none; }
+  .lang-section.visible { display: block; }
+
+  a { color: #FF6D00; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <div class="app-name">📅 Ημερολόγιον Πυθαγόρας</div>
+    <div class="lang-toggle">
+      <button class="lang-btn active" id="btn-el" onclick="setLang('el')">ΕΛ</button>
+      <button class="lang-btn" id="btn-en" onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+  <!-- ═══════════════════════════════════════════════════════════ GREEK -->
+  <div class="lang-section" id="lang-el">
+    <p class="last-updated">Τελευταία ενημέρωση: Ιούνιος 2026</p>
+    <h1>Πολιτική Απορρήτου</h1>
+
+    <div class="highlight">
+      Η εφαρμογή <strong>Ημερολόγιον Πυθαγόρας</strong> σέβεται απολύτως την ιδιωτικότητά σου. Όλα τα δεδομένα αποθηκεύονται <strong>αποκλειστικά στη συσκευή σου</strong> και δεν αποστέλλονται πουθενά.
+    </div>
+
+    <div class="card">
+      <h2>1. Τι δεδομένα συλλέγουμε</h2>
+      <p>Η εφαρμογή <strong>δεν συλλέγει κανένα προσωπικό δεδομένο</strong>. Αποθηκεύονται τοπικά στη συσκευή σου μόνο:</p>
+      <ul>
+        <li>Οι ειδοποιήσεις και υπενθυμίσεις που δημιουργείς</li>
+        <li>Οι ρυθμίσεις ήχου και δόνησης που επιλέγεις</li>
+        <li>Οι ημερομηνίες και ώρες των εκδηλώσεών σου</li>
+      </ul>
+      <p>Τα παραπάνω δεδομένα δεν φεύγουν ποτέ από τη συσκευή σου.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. Πώς χρησιμοποιούμε τα δεδομένα</h2>
+      <p>Τα δεδομένα χρησιμοποιούνται αποκλειστικά για:</p>
+      <ul>
+        <li>Την εμφάνιση των ειδοποιήσεών σου στο ημερολόγιο</li>
+        <li>Την αποστολή τοπικών υπενθυμίσεων την κατάλληλη ώρα</li>
+        <li>Την επαναφορά των alarm μετά από επανεκκίνηση της συσκευής</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. Κοινοποίηση σε τρίτους</h2>
+      <p><strong>Δεν κοινοποιούμε, δεν πουλάμε και δεν μεταφέρουμε</strong> κανένα δεδομένο σου σε τρίτους. Δεν υπάρχουν διαφημίσεις, analytics ή tracking οποιουδήποτε είδους.</p>
+    </div>
+
+    <div class="card">
+      <h2>4. Άδειες που χρησιμοποιεί η εφαρμογή</h2>
+      <ul>
+        <li><strong>Ειδοποιήσεις</strong> — για να σου στέλνει υπενθυμίσεις</li>
+        <li><strong>Alarm (ακριβείς υπενθυμίσεις)</strong> — για να χτυπά την ακριβή ώρα που ορίζεις</li>
+        <li><strong>Εκκίνηση με τη συσκευή</strong> — για να επαναφέρει τα alarm μετά από restart</li>
+        <li><strong>Full-screen intent</strong> — για να εμφανίζεται πάνω από το lock screen</li>
+      </ul>
+      <p>Καμία άδεια δεν χρησιμοποιείται για συλλογή δεδομένων.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Αποθήκευση και διαγραφή δεδομένων</h2>
+      <p>Όλα τα δεδομένα αποθηκεύονται τοπικά μέσω <strong>SharedPreferences</strong> της συσκευής σου. Μπορείς να τα διαγράψεις οποτεδήποτε:</p>
+      <ul>
+        <li>Διαγράφοντας τις ειδοποιήσεις μέσα από την εφαρμογή</li>
+        <li>Απεγκαθιστώντας την εφαρμογή — διαγράφονται τα πάντα</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6. Ασφάλεια</h2>
+      <p>Επειδή δεν υπάρχει μεταφορά δεδομένων μέσω διαδικτύου, δεν υπάρχει κίνδυνος παραβίασης από εξωτερικές πηγές. Τα δεδομένα σου είναι τόσο ασφαλή όσο η ίδια η συσκευή σου.</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Παιδιά</h2>
+      <p>Η εφαρμογή δεν συλλέγει δεδομένα από κανέναν χρήστη, συμπεριλαμβανομένων παιδιών κάτω των 13 ετών.</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Αλλαγές στην πολιτική</h2>
+      <p>Αν αλλάξει κάτι στην πολιτική απορρήτου, θα ενημερωθεί η ημερομηνία στην κορυφή αυτής της σελίδας. Οποιαδήποτε σημαντική αλλαγή θα γνωστοποιείται μέσω ενημέρωσης της εφαρμογής.</p>
+    </div>
+
+    <div class="contact-box">
+      <h2>Επικοινωνία</h2>
+      <p>Για οποιαδήποτε ερώτηση σχετικά με την πολιτική απορρήτου, επικοινώνησε μαζί μας:</p>
+      <p style="margin-top:8px;"><a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ ENGLISH -->
+  <div class="lang-section" id="lang-en">
+    <p class="last-updated">Last updated: June 2026</p>
+    <h1>Privacy Policy</h1>
+
+    <div class="highlight">
+      <strong>Pythagoras Calendar</strong> fully respects your privacy. All data is stored <strong>exclusively on your device</strong> and is never transmitted anywhere.
+    </div>
+
+    <div class="card">
+      <h2>1. Data we collect</h2>
+      <p>The app <strong>does not collect any personal data</strong>. Only the following is stored locally on your device:</p>
+      <ul>
+        <li>The reminders and notifications you create</li>
+        <li>The sound and vibration settings you choose</li>
+        <li>The dates and times of your events</li>
+      </ul>
+      <p>The above data never leaves your device.</p>
+    </div>
+
+    <div class="card">
+      <h2>2. How we use your data</h2>
+      <p>Data is used solely for:</p>
+      <ul>
+        <li>Displaying your reminders in the calendar</li>
+        <li>Sending local notifications at the right time</li>
+        <li>Restoring alarms after a device reboot</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>3. Sharing with third parties</h2>
+      <p>We <strong>do not share, sell, or transfer</strong> any of your data to third parties. There are no ads, analytics, or tracking of any kind.</p>
+    </div>
+
+    <div class="card">
+      <h2>4. Permissions used by the app</h2>
+      <ul>
+        <li><strong>Notifications</strong> — to send you reminders</li>
+        <li><strong>Exact alarms</strong> — to trigger at the exact time you set</li>
+        <li><strong>Boot on startup</strong> — to restore alarms after a device restart</li>
+        <li><strong>Full-screen intent</strong> — to appear over the lock screen</li>
+      </ul>
+      <p>No permission is used for data collection.</p>
+    </div>
+
+    <div class="card">
+      <h2>5. Data storage and deletion</h2>
+      <p>All data is stored locally using your device's <strong>SharedPreferences</strong>. You can delete it at any time by:</p>
+      <ul>
+        <li>Deleting individual reminders within the app</li>
+        <li>Uninstalling the app — all data is permanently removed</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>6. Security</h2>
+      <p>Because there is no internet data transfer, there is no risk of external data breaches. Your data is as secure as your device itself.</p>
+    </div>
+
+    <div class="card">
+      <h2>7. Children</h2>
+      <p>The app does not collect data from any user, including children under the age of 13.</p>
+    </div>
+
+    <div class="card">
+      <h2>8. Changes to this policy</h2>
+      <p>If anything changes in this privacy policy, the date at the top of this page will be updated. Any significant changes will be communicated through an app update.</p>
+    </div>
+
+    <div class="contact-box">
+      <h2>Contact</h2>
+      <p>For any questions regarding this privacy policy, please contact us:</p>
+      <p style="margin-top:8px;"><a href="mailto:your@email.com">your@email.com</a></p>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function setLang(lang) {
+    document.getElementById('lang-el').classList.toggle('visible', lang === 'el');
+    document.getElementById('lang-en').classList.toggle('visible', lang === 'en');
+    document.getElementById('btn-el').classList.toggle('active', lang === 'el');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+
+  // Auto-detect language
+  const userLang = navigator.language || navigator.userLanguage || 'el';
+  const defaultLang = userLang.startsWith('el') ? 'el' : 'en';
+  setLang(defaultLang);
+</script>
+
+</body>
+</html>
