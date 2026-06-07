@@ -126,28 +126,6 @@
     color: #444;
   }
 
-  .contact-box {
-    background: #FF6D00;
-    color: white;
-    border-radius: 12px;
-    padding: 20px 24px;
-    margin-top: 32px;
-  }
-
-  .contact-box h2 {
-    color: white;
-    border-left-color: white;
-    margin-top: 0;
-  }
-
-  .contact-box p, .contact-box a {
-    color: rgba(255,255,255,0.9);
-  }
-
-  .contact-box a {
-    font-weight: 600;
-  }
-
   .lang-section { display: none; }
   .lang-section.visible { display: block; }
 
@@ -238,12 +216,6 @@
       <h2>8. Αλλαγές στην πολιτική</h2>
       <p>Αν αλλάξει κάτι στην πολιτική απορρήτου, θα ενημερωθεί η ημερομηνία στην κορυφή αυτής της σελίδας. Οποιαδήποτε σημαντική αλλαγή θα γνωστοποιείται μέσω ενημέρωσης της εφαρμογής.</p>
     </div>
-
-    <div class="contact-box">
-      <h2>Επικοινωνία</h2>
-      <p>Για οποιαδήποτε ερώτηση σχετικά με την πολιτική απορρήτου, επικοινώνησε μαζί μας:</p>
-      <p style="margin-top:8px;"><a href="mailto:your@email.com">your@email.com</a></p>
-    </div>
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ ENGLISH -->
@@ -315,12 +287,6 @@
       <h2>8. Changes to this policy</h2>
       <p>If anything changes in this privacy policy, the date at the top of this page will be updated. Any significant changes will be communicated through an app update.</p>
     </div>
-
-    <div class="contact-box">
-      <h2>Contact</h2>
-      <p>For any questions regarding this privacy policy, please contact us:</p>
-      <p style="margin-top:8px;"><a href="mailto:your@email.com">your@email.com</a></p>
-    </div>
   </div>
 
 </div>
@@ -334,7 +300,6 @@
     document.documentElement.lang = lang;
   }
 
-  // Auto-detect language
   const userLang = navigator.language || navigator.userLanguage || 'el';
   const defaultLang = userLang.startsWith('el') ? 'el' : 'en';
   setLang(defaultLang);
